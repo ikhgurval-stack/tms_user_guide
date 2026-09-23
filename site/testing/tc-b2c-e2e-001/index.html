@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>TC-B2C-E2E-001 — B2C Order-to-Settlement End-to-End Test - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">E-Mart TMS Knowledge Base</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false"> templates</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../_templates/how-to-template/" class="dropdown-item">Бүлгийн нэрийг энд бичнэ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Dispatch</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../dispatch/assign-driver/" class="dropdown-item">Жолооч оноох</a>
+</li>
+                                    
+<li>
+    <a href="../../dispatch/assign-vehicle/" class="dropdown-item">Тээврийн хэрэгсэл оноох</a>
+</li>
+                                    
+<li>
+    <a href="../../dispatch/publish/" class="dropdown-item">Хүргэлтийн даалгавар нийтлэх</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Execution</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../execution/" class="dropdown-item">Driver App: ачилт, хүргэлт, сав буцаан татах</a>
+</li>
+                                    
+<li>
+    <a href="../../execution/store-app/" class="dropdown-item">Store App: хүлээн авалт ба тээврийн үнэлгээ</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Faq</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../faq/" class="dropdown-item">Түгээмэл асуулт</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../getting-started/login/" class="dropdown-item">Аппликейшнд нэвтрэх</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/navigation/" class="dropdown-item">Гарын авлагын чиглүүлэг</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/overview/" class="dropdown-item">Үндсэн өгөгдөл бэлтгэх</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Gps</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../gps/" class="dropdown-item">GPS ба бодит явсан зай</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Planning</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../planning/manual-plan/" class="dropdown-item">Гараар төлөвлөх</a>
+</li>
+                                    
+<li>
+    <a href="../../planning/overview/" class="dropdown-item">Тээврийн төлөвлөлт</a>
+</li>
+                                    
+<li>
+    <a href="../../planning/smart-plan/" class="dropdown-item">Ухаалаг төлөвлөлт (Intelligent Dispatch)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reference</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/" class="dropdown-item">Лавлах</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/business-rules/" class="dropdown-item">Тестээр баталгаажсан ажиллагаа</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/cost-settlement/" class="dropdown-item">Тээвэрлэгчийн төлбөр тооцоо, зардлын баримт батлах</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/status-reference/" class="dropdown-item">Төлөвийн лавлах</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/user-roles/" class="dropdown-item">Тестийн оролцогчид</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reports</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reports/" class="dropdown-item">Тайлан</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Testing</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">TC-B2C-E2E-001 — B2C Order-to-Settlement End-to-End Test</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Transportation order</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../transportation-order/cancel-order/" class="dropdown-item">Тээврийн захиалга цуцлах</a>
+</li>
+                                    
+<li>
+    <a href="../../transportation-order/create-order/" class="dropdown-item">Тээврийн захиалгын өгөгдлийг шалгах</a>
+</li>
+                                    
+<li>
+    <a href="../../transportation-order/edit-order/" class="dropdown-item">Тээврийн захиалга засварлах</a>
+</li>
+                                    
+<li>
+    <a href="../../transportation-order/import-orders/" class="dropdown-item">Тээврийн захиалга импортлох</a>
+</li>
+                                    
+<li>
+    <a href="../../transportation-order/order-status/" class="dropdown-item">Тээврийн захиалгын төлөв</a>
+</li>
+                                    
+<li>
+    <a href="../../transportation-order/overview/" class="dropdown-item">Тээврийн захиалга</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Troubleshooting</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../troubleshooting/" class="dropdown-item">Туршилтаар ажиглагдсан асуудлууд</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Tutorials</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tutorials/order-to-delivery/" class="dropdown-item">B2C: захиалгаас төлбөр тооцоо хүртэл</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../reports/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../transportation-order/cancel-order/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#tc-b2c-e2e-001-b2c-order-to-settlement-end-to-end-test" class="nav-link">TC-B2C-E2E-001 — B2C Order-to-Settlement End-to-End Test</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Тестийн бүртгэл</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Тестийн өгөгдөл</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Гүйцэтгэл ба бодит үр дүн</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#known-observations" class="nav-link">Known observations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evidence-screenshot" class="nav-link">Evidence ба дутуу screenshot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Дараагийн санал болгож буй тестүүд</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="tc-b2c-e2e-001-b2c-order-to-settlement-end-to-end-test">TC-B2C-E2E-001 — B2C Order-to-Settlement End-to-End Test</h1>
+<h2 id="_1">Тестийн бүртгэл</h2>
+<table>
+<thead>
+<tr>
+<th>Үзүүлэлт</th>
+<th>Утга</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>B2C хүргэлт, сав буцаан татах, хүлээн авалт, үнэлгээ, төлбөр тооцоо</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>Үндсэн өгөгдөл бүрдсэн; Web TMS, Driver App, Store App-д ажиллах хэрэглэгчид бэлэн</td>
+</tr>
+<tr>
+<td>Main flow</td>
+<td>Order → Planning → Delivery → Pickup → Store Receipt → Evaluation → Cost</td>
+</tr>
+<tr>
+<td>Expected</td>
+<td>Урсгал дуусаж, холбогдох эцсийн төлөвүүд Completed/Approved болох</td>
+</tr>
+<tr>
+<td>Actual</td>
+<td>PASS — хэрэглэгчийн өгсөн гүйцэтгэсэн тестийн үр дүн</td>
+</tr>
+<tr>
+<td>Эх сурвалж</td>
+<td>Documentation шинэчлэх хүсэлтэд өгсөн TC-B2C-E2E-001-ийн батлагдсан тестийн мэдээлэл</td>
+</tr>
+<tr>
+<td>Нотолгооны байдал</td>
+<td>20 annotated PNG-г гарын авлагад оруулсан; зураг бүрийн байрлал болон дутуу нотолгоог доор тэмдэглэсэн</td>
+</tr>
+</tbody>
+</table>
+<p>Энэ нь өмнө гүйцэтгэсэн тестийн бүртгэл. Documentation шинэчлэх явцад TMS дээр дахин тест ажиллуулаагүй. Тестийн огноо, орчны хувилбар, гүйцэтгэгчийг эх сурвалжид тусад нь өгөөгүй; баримтын дугаараас таамаглан нөхөөгүй.</p>
+<h2 id="_2">Тестийн өгөгдөл</h2>
+<p>Үндсэн бүртгэлийн утгууд: <a href="../../getting-started/overview/">Customer, Loading Point, Delivery Point, Carrier, Vehicle, Driver</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Баримт / хэрэглэгч</th>
+<th>Дугаар / утга</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery Task</td>
+<td>B2CVS260922000001</td>
+</tr>
+<tr>
+<td>Pickup Order</td>
+<td>B2CPG260922000001</td>
+</tr>
+<tr>
+<td>Pickup Task</td>
+<td>B2CPT260922000001</td>
+</tr>
+<tr>
+<td>Carrier Expense Bill</td>
+<td>B2CEP260922000001</td>
+</tr>
+<tr>
+<td>Store хэрэглэгч</td>
+<td>qqB2C-DP-032</td>
+</tr>
+<tr>
+<td>Захиалгын тоо</td>
+<td>2; тус бүрийн ID өгөөгүй</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">Гүйцэтгэл ба бодит үр дүн</h2>
+<table>
+<thead>
+<tr>
+<th>Үе шат</th>
+<th>Гүйцэтгэсэн үйлдэл</th>
+<th>Бодит үр дүн</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Төлөвлөлт</td>
+<td>2 захиалгаар Intelligent Dispatch ашигласан</td>
+<td>2 хүргэлтийн цэг, 9.547 km, 47 min; төлөвлөгөөнөөс Delivery Task үүссэн</td>
+</tr>
+<tr>
+<td>Оноолт, нийтлэх</td>
+<td>1018УБА, B2C-DRV05 оноож нийтэлсэн</td>
+<td>Driver App-ийн Current хэсэгт харагдсан</td>
+</tr>
+<tr>
+<td>Ачилт</td>
+<td>Arrival Confirmation → Confirm Loading → Loading Confirmation Signature</td>
+<td>2 цэг, Qty / Container = 2 / 0, Volume / Weight = 0.03 m³ / 2 kg; Awaiting Delivery</td>
+</tr>
+<tr>
+<td>Савны бүртгэл</td>
+<td>DP-032 дээр Pickup Registration, Tote Box = 1</td>
+<td>Pickup Order автоматаар үүссэн; барааны тоо, жин, эзлэхүүн 0; сав 1</td>
+</tr>
+<tr>
+<td>Хүргэлт</td>
+<td>DP-032, дараа нь автоматаар гарсан DP-031 дээр Arrival Confirmation → Delivery Completed</td>
+<td>Delivery Task Completed; савны бүртгэл хүргэлтийг үргэлжлүүлэхэд саад болоогүй</td>
+</tr>
+<tr>
+<td>Буцаан татах</td>
+<td>Хүргэлт дууссаны дараа гарсан тусдаа Pickup Task дээр Delivery Confirmation хийсэн</td>
+<td>Pickup points = 1, Qty / Container = 0 / 1, очих газар Demo Distribution Center; Pickup Task Completed</td>
+</tr>
+<tr>
+<td>Буцаан татах захиалга</td>
+<td>Web Pickup Order-ийг шалгасан</td>
+<td>Planned / Actual picked up / Actual delivered container = 1 / 1 / 1; Completed</td>
+</tr>
+<tr>
+<td>Дууссан даалгавар</td>
+<td>Task List → Completed шалгасан</td>
+<td>Delivery Task, Pickup Task тусдаа Completed гэж харагдсан</td>
+</tr>
+<tr>
+<td>Хүлээн авалт</td>
+<td>qqB2C-DP-032 хэрэглэгчээр Store App-ийн Receipt List шалгасан</td>
+<td>Delivery Task нь Completed / Received мэдээлэлтэй, Received хэсэгт байсан</td>
+</tr>
+<tr>
+<td>Үнэлгээ</td>
+<td>Punctuality 3/5 Normal, Cargo Damage 3/5 Normal, Overall 5/5 Awesome, Comment: Good Service; Submit</td>
+<td>Web дээр Дундаж / Дундаж / Маш сайн, Good Service, үнэлэгч qqB2C-DP-032; даалгавар, цэг, 1018УБА, Мөнхөө мэдээлэлтэй харагдсан</td>
+</tr>
+<tr>
+<td>Төлбөр тооцоо</td>
+<td>Зөв тээвэрлэгчийн идэвхжүүлсэн гэрээ, Delivery Point based, 5,000 тариф</td>
+<td>2 × 5,000 = 10,000; Transportation Expense баримт Initial төлөвтэй үүссэн</td>
+</tr>
+<tr>
+<td>Батлах</td>
+<td>Review → approval comment → Approve</td>
+<td>Эх сурвалжид reviewed/approved гэж тэмдэглэсэн; 20 зурагт UI төлөв Хянагдсан</td>
+</tr>
+</tbody>
+</table>
+<p>Алхамчилсан гарын авлага: <a href="../../tutorials/order-to-delivery/">захиалгаас төлбөр тооцоо хүртэл</a>.</p>
+<h2 id="known-observations">Known observations</h2>
+<ul>
+<li>Эхний төлөвлөлтүүдэд <strong>0/0 delivery point</strong> гарсан; тээврийн хэрэгслийн сонголт, тохиргоог зөв болгосны дараа амжилттай болсон. Тохиргооны яг утга өгөөгүй.</li>
+<li>Гэрээний тээвэрлэгч <strong>[B2C] B2C</strong>, даалгаврынх <strong>[B2C_TEST01] B2C_TEST</strong> байсан үед <strong>“Төлбөр тооцооны гэрээ таараагүй”</strong> мэдэгдэл гарсан; зөв тээвэрлэгчийн шинэ гэрээг идэвхжүүлсний дараа амжилттай болсон.</li>
+<li>Calculated distance <strong>9.547 km</strong>, Actual mileage <strong>0 km</strong> хэвээр байсан. Шалтгаан тогтоогоогүй.</li>
+<li>UI дээр <strong>¥</strong> харагдсан. Currency display configuration-ийг тусад нь шалгах шаардлагатай; production орчинд ₮ хэрэглэх эсэх баталгаажаагүй.</li>
+<li>Төлөвлөлт ба Driver App-ийн гүйцэтгэл эхлэх дараалал ялгаатай харагдсан. Үүнийг системийн дүрэм гэж дүгнээгүй.</li>
+</ul>
+<h2 id="evidence-screenshot">Evidence ба дутуу screenshot</h2>
+<p>Зургийн README-ийн тайлбар, PNG бүрийн харагдах агуулга болон зааврын контекстийг тулгаж, 20 зургийг тус бүр нэг үндсэн байрлалд оруулсан. Доорх нь давхар зураг оруулахгүйгээр эх зураг, холбогдох зааварт хүрэх холбоос юм.</p>
+<table>
+<thead>
+<tr>
+<th>Screenshot</th>
+<th>Markdown file</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/01-transportation-plan-success.png">01-transportation-plan-success.png</a></td>
+<td><a href="../../planning/smart-plan/">planning/smart-plan.md</a></td>
+<td>Алхамууд: төлөвлөгөө шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/02-delivery-task-driver-assigned.png">02-delivery-task-driver-assigned.png</a></td>
+<td><a href="../../dispatch/assign-driver/">dispatch/assign-driver.md</a></td>
+<td>Алхамууд: оноолтыг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/03-driver-current-task.png">03-driver-current-task.png</a></td>
+<td><a href="../../dispatch/publish/">dispatch/publish.md</a></td>
+<td>Алхамууд: Current хэсэгт шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/04-loading-confirmation.png">04-loading-confirmation.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>1. Ачилтын цэгт ирэх, ачилт баталгаажуулах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/05-loading-signature.png">05-loading-signature.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>1. Ачилтын цэгт ирэх, ачилт баталгаажуулах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/06-awaiting-delivery-dp032.png">06-awaiting-delivery-dp032.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>1. Ачилтын цэгт ирэх, ачилт баталгаажуулах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/07-pickup-registration-entry.png">07-pickup-registration-entry.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/08-pickup-registration-form.png">08-pickup-registration-form.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/09-pickup-registered.png">09-pickup-registered.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/10-delivery-complete-with-pickup.png">10-delivery-complete-with-pickup.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>3. Хүргэлтийн цэгүүдийг дуусгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/11-next-delivery-dp031.png">11-next-delivery-dp031.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>3. Хүргэлтийн цэгүүдийг дуусгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/12-pickup-task-to-dc.png">12-pickup-task-to-dc.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>4. Сав буцаан татах даалгаврыг дуусгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/13-pickup-order-completed-web.png">13-pickup-order-completed-web.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>5. Web захиалга болон дууссан даалгавруудыг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/14-driver-completed-task-list.png">14-driver-completed-task-list.png</a></td>
+<td><a href="../../execution/">execution/index.md</a></td>
+<td>5. Web захиалга болон дууссан даалгавруудыг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/15-store-receipt.png">15-store-receipt.png</a></td>
+<td><a href="../../execution/store-app/">execution/store-app.md</a></td>
+<td>1. Хүлээн авалтыг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/16-store-evaluation.png">16-store-evaluation.png</a></td>
+<td><a href="../../execution/store-app/">execution/store-app.md</a></td>
+<td>2. Тээврийн үнэлгээ илгээх</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/17-web-transport-evaluation.png">17-web-transport-evaluation.png</a></td>
+<td><a href="../../execution/store-app/">execution/store-app.md</a></td>
+<td>3. Web TMS дээр үнэлгээг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/18-cost-agreement-mismatch.png">18-cost-agreement-mismatch.png</a></td>
+<td><a href="../../reference/cost-settlement/">reference/cost-settlement.md</a></td>
+<td>Анхаарах зүйл</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/19-cost-calculation-10000.png">19-cost-calculation-10000.png</a></td>
+<td><a href="../../reference/cost-settlement/">reference/cost-settlement.md</a></td>
+<td>2. Төлбөр тооцоо хийж, зардлын баримтыг шалгах</td>
+</tr>
+<tr>
+<td><a href="../../assets/screenshots/tc-b2c-e2e-001/20-expense-bill-approved.png">20-expense-bill-approved.png</a></td>
+<td><a href="../../reference/cost-settlement/">reference/cost-settlement.md</a></td>
+<td>3. Зардлын баримтыг хянан батлах</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Зураг ба эх сурвалжийн зөрүү:</strong></p>
+<ul>
+<li>01 зурагт төлөвлөгөө DP-032 → DP-031, 04 зурагт Delivery Point1 нь DP-031, 06 зурагт гүйцэтгэл DP-032-оос эхэлсэн байна. Дарааллын ялгааг аль дэлгэц, үе шаттай харьцуулсныг нэмж шалгана.</li>
+<li>01 зураг дахь төлөвлөлтийн дүн 12,864.1; 19 зураг дахь settlement дүн 10,000. Эдгээр дүнгийн хамаарлыг баталгаажуулаагүй.</li>
+<li>07, 09 зурагт Pickup бүртгэлийн өмнө болон дараа Arrival Confirmation харагдана. Өмнөх тестийн үйлдлийн дараалалтай тулгаж шалгана.</li>
+<li>08 зурагт Tote Box талбар хоосон. Энэ нь бөглөх маягтыг харуулна; нэг сав бүртгэсний үр дүнг 12, 13, 14 зурагт шалгана.</li>
+<li>13 зурагт “Үүсгэх арга: Гараар үүсгэх” харагдсан нь захиалга автоматаар үүссэн гэсэн тестийн тайлбартай зөрнө. Үүсэх механизмын талаар шинэ дүрэм дүгнээгүй.</li>
+<li>16, 17 зурагт тайлбар <strong>Good Service;</strong>, эх тестийн тэмдэглэлд <strong>Good Service</strong> байна.</li>
+<li>20 зурагт эцсийн төлөв <strong>Хянагдсан</strong> гэж харагдана. Review, тайлбар, Approve хийх явцын дэлгэцүүд энэ багцад байхгүй.</li>
+<li>README-ийн 03, 12, 13 зургийн highlight тайлбаруудын зарим утга өөр дугаарын хүрээнд эсвэл хүрээний гадна харагдсан. Зааврын зургийн тайлбарт бодит байрлалыг баримталсан.</li>
+</ul>
+<p><strong>Дутуу screenshot:</strong></p>
+<ul>
+<li>Үндсэн өгөгдөл болон Store хэрэглэгчийн бүртгэл, нэвтрэх дэлгэцүүд.</li>
+<li>Тестийн хоёр Transportation Order-ийн дэлгэрэнгүй.</li>
+<li>0/0 төлөвлөлт болон амжилттай ашигласан тохиргооны дэлгэц.</li>
+<li>Tote Box = 1 гэж бөглөсөн маягт; Pickup Order анх үүссэн мөчийн дэлгэц.</li>
+<li>Зөв тээвэрлэгчийн идэвхжүүлсэн гэрээ, Delivery Point based төрөл, нэг цэгийн 5,000 тариф.</li>
+<li>Зардлын баримтын Initial төлөв, Review, approval comment, Approve хийх дэлгэцүүд.</li>
+</ul>
+<!-- TODO: Screenshot required — дээр жагсаасан дутуу нотолгоонууд -->
+<!-- REVIEW REQUIRED: Дараалал, төлөвлөлтийн дүн, Pickup Order-ийн үүсгэх арга болон тайлбарын бичвэрийн зөрүүг эх тесттэй тулгах. -->
+<!-- TODO: Тестийн огноо, орчны хувилбар, гүйцэтгэгч, захиалгын ID болон planning configuration-ийг нөхөж баталгаажуулах. -->
+
+<h2 id="_4">Дараагийн санал болгож буй тестүүд</h2>
+<p>Доорх тестүүдийн үр дүн энэ бүртгэлд байхгүй.</p>
+<ul>
+<li>Order cancellation</li>
+<li>Delivery failure</li>
+<li>Partial delivery</li>
+<li>Capacity exceeded</li>
+<li>Multi-vehicle planning</li>
+<li>Pickup cancellation</li>
+<li>Expense bill rejection</li>
+<li>Expense bill void</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
