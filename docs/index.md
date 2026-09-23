@@ -1,55 +1,56 @@
 # E-Mart TMS Knowledge Base
 
-Transportation Management System-ийн эцсийн хэрэглэгчийн гарын авлага.
-
----
+Transportation Management System (TMS)-ийн эцсийн хэрэглэгчийн гарын авлага.
 
 ## Documentation Status
 
-!!! info "UAT Documentation"
-    Энэхүү гарын авлага нь TMS системийн UAT болон тестийн явцад боловсруулагдаж байна.
+Энэхүү гарын авлага нь UAT болон тестийн явцад боловсруулагдаж байна. B2C урсгалын тайлбарыг хэрэглэгчийн өгсөн **TC-B2C-E2E-001** тестийн үр дүнгээр шинэчилсэн. Screenshot хавсаргах болон баталгаажаагүй үйлдлийг тусад нь шалгах ажил үлдсэн.
 
 ## Эндээс юу олох боломжтой вэ?
 
 ### Getting Started
 
-TMS системд анхлан ажиллаж байгаа хэрэглэгчдэд зориулсан үндсэн мэдээлэл.
+[Үндсэн өгөгдөл бэлтгэх](getting-started/overview.md), [нэвтрэх](getting-started/login.md), [гарын авлагын чиглүүлэг](getting-started/navigation.md).
 
 ### Transportation Order
 
-Захиалга үүсгэх, импортлох, засварлах, цуцлах болон төлөвүүдийн мэдээлэл.
+[Тээврийн захиалгын тойм](transportation-order/overview.md) болон тестэд ашигласан захиалгын мэдээлэл.
 
 ### Transportation Planning
 
-Захиалгуудыг тээвэрлэлтийн төлөвлөгөөнд оруулах, Smart Plan болон Manual Planning ашиглах.
+[Төлөвлөлтийн тойм](planning/overview.md), [ухаалаг төлөвлөлт (Intelligent Dispatch)](planning/smart-plan.md), [гараар төлөвлөх үйлдлийн баталгаажуулалтын хүрээ](planning/manual-plan.md).
 
 ### Dispatch
 
-Жолооч, тээврийн хэрэгсэл оноох болон төлөвлөгөөг publish хийх.
+[Тээврийн хэрэгсэл оноох](dispatch/assign-vehicle.md), [жолооч оноох](dispatch/assign-driver.md), [хүргэлтийн даалгавар нийтлэх](dispatch/publish.md).
 
 ### Execution
 
-Тээвэрлэлтийн гүйцэтгэл болон хүргэлтийн процесс.
+[Driver App: ачилт, хүргэлт, сав буцаан татах](execution/index.md), [Store App: хүлээн авалт ба тээврийн үнэлгээ](execution/store-app.md).
 
 ### GPS
 
-Тээврийн хэрэгслийн байршил болон GPS мэдээлэл.
+[GPS болон бодит явсан зайн баталгаажуулалтын хүрээ](gps/index.md).
 
 ### Reports
 
-TMS тайлан болон мэдээлэл экспортлох.
+[Тайлангийн баталгаажуулалтын хүрээ](reports/index.md).
 
 ### Troubleshooting
 
-Түгээмэл асуудал, алдаа болон тэдгээрийг шийдвэрлэх заавар.
+[Туршилтаар ажиглагдсан асуудлууд](troubleshooting/index.md).
 
----
+## B2C урсгалыг бүтнээр нь дагах
+
+[B2C: захиалгаас төлбөр тооцоо хүртэл](tutorials/order-to-delivery.md) хуудсаас эхэлнэ. [Төлбөр тооцооны заавар](reference/cost-settlement.md), [төлөвийн лавлах](reference/status-reference.md), [тестийн үр дүн](testing/tc-b2c-e2e-001.md)-г холбогдох алхамд ашиглана.
 
 ## Documentation Legend
 
-| Status | Meaning |
+| Status | Тайлбар |
 |---|---|
 | 🟡 Draft | Баримтжуулж байгаа |
-| 🔵 Testing | UAT/Test хийж байгаа |
-| 🟢 Verified | Систем дээр баталгаажсан |
-| 🔴 Needs Update | Систем өөрчлөгдсөн тул шинэчлэх шаардлагатай |
+| 🔵 Testing | UAT/тест хийж байгаа |
+| 🟢 Verified | Тестийн эх сурвалжаар баталгаажсан хүрээ |
+| 🔴 Needs Update | Шинэчлэх шаардлагатай |
+
+Verified нь тухайн тестэд хамаарах бөгөөд системийн бүх хувилбар, тохиргоог хамарсан баталгаа биш.
