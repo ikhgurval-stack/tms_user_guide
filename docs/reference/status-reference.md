@@ -11,6 +11,6 @@
 | Pickup Order | Completed | Нэг сав татан авч, нэг сав хүргэсэн үр дүнтэй |
 | Store Receipt | Completed / Received | Жолооч хүргэлт дуусгасны дараа Received хэсэгт харагдсан |
 | Carrier Expense Bill | Initial | Баримт анх үүсэхэд |
-| Carrier Expense Bill | reviewed/approved | Review, тайлбар, Approve-ийн дараах эх сурвалжийн тэмдэглэл; UI дахь яг бичвэрийг баталгаажуулах шаардлагатай |
+| Carrier Expense Bill | Хянагдсан | Тестийн эх сурвалжид reviewed/approved гэж тэмдэглэсэн; 20 зураг дахь эцсийн UI төлөв |
 
 Үйлдлийн заавар: [Driver App](../execution/index.md), [Store App](../execution/store-app.md), [зардлын баримт](cost-settlement.md).

@@ -10,6 +10,6 @@ TC-B2C-E2E-001 тестэд тооцоолсон зай (Calculated distance) **
 
 GPS дэлгэц, байршил харах алхам болон бодит зай тооцох ажиллагааны зааврыг нэмж баталгаажуулна.
 
-<!-- TODO: Screenshot required — Calculated distance 9.547 km болон Actual mileage 0 km үзүүлэлт -->
+Тооцоолсон зай **9.547**, бодит явсан зам **0** гэсэн үзүүлэлтүүдийг [төлбөр тооцооны зааврын 19 зурагт](../reference/cost-settlement.md) харуулсан.
 
 [Туршилтын бусад ажиглалт](../troubleshooting/index.md).

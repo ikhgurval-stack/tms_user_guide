@@ -23,7 +23,7 @@ DP-032 цэгт **qqB2C-DP-032** Store хэрэглэгч бэлтгэгдсэн
 3. **Receipt List** дотор **B2CVS260922000001** хүргэлтийг шалгана.
 4. **Completed / Received** мэдээлэлтэй, **Received** хэсэгт орсныг шалгана.
 
-<!-- TODO: Screenshot required — Store App-ийн Receipt List / Received хэсэг дэх B2CVS260922000001 -->
+    ![Store App-ийн Received хэсэгт Completed төлөвтэй B2CVS260922000001 хүргэлт](../assets/screenshots/tc-b2c-e2e-001/15-store-receipt.png)
 
 Тестэд жолооч хүргэлтээ дуусгасны дараа хүлээн авалтын мэдээлэл **Received** хэсэгт орсон. Store хэрэглэгч тусдаа хүлээн авалт баталгаажуулах товч дарсан гэж эх сурвалжид тэмдэглээгүй.
 
@@ -33,6 +33,8 @@ DP-032 цэгт **qqB2C-DP-032** Store хэрэглэгч бэлтгэгдсэн
 2. Үнэлгээ болон тайлбарыг оруулна. Тестэд доорх утгуудыг ашигласан.
 3. **Submit** үйлдлээр илгээнэ.
 
+    ![Store App-ийн 3, 3, 5 одтой тээврийн үнэлгээ, тайлбар болон Submit товч](../assets/screenshots/tc-b2c-e2e-001/16-store-evaluation.png)
+
 | Талбар | Монгол тайлбар | Тестийн үнэлгээ | App дээрх тайлбар |
 |---|---|---|---|
 | Punctuality | Цаг баримталсан байдал | 3/5 | Normal |
@@ -40,13 +42,13 @@ DP-032 цэгт **qqB2C-DP-032** Store хэрэглэгч бэлтгэгдсэн
 | Overall | Ерөнхий үнэлгээ | 5/5 | Awesome |
 | Comment | Тайлбар | Good Service | — |
 
-<!-- TODO: Screenshot required — Transport Evaluation-ийн тестийн утгууд болон Submit үйлдэл -->
-
 ### 3. Web TMS дээр үнэлгээг шалгах
 
 1. **Transportation Management → Transportation Evaluation** хэсгийг нээнэ.
 2. **B2CVS260922000001** даалгавар, **B2C-DP-032 / B2C Home 032** хүргэлтийн цэгийн үнэлгээг шалгана.
 3. Доорх мэдээлэлтэй тулгана.
+
+    ![Web TMS дээр хүргэлтийн даалгавар, жолооч, үнэлгээ, тайлбар болон үнэлэгч харагдсан байдал](../assets/screenshots/tc-b2c-e2e-001/17-web-transport-evaluation.png)
 
 | Мэдээлэл | Web дээрх тестийн үр дүн |
 |---|---|
@@ -58,8 +60,6 @@ DP-032 цэгт **qqB2C-DP-032** Store хэрэглэгч бэлтгэгдсэн
 | Comment | Good Service |
 | Evaluator | qqB2C-DP-032 |
 
-<!-- TODO: Screenshot required — Web Transportation Evaluation дээрх даалгавар, цэг, жолооч, үнэлгээ, тайлбар, үнэлэгч -->
-
 ## Хүлээгдэж буй үр дүн
 
 Store App-аас илгээсэн үнэлгээ Web TMS-ийн **Transportation Evaluation** хэсэгт харагдана.
@@ -67,3 +67,6 @@ Store App-аас илгээсэн үнэлгээ Web TMS-ийн **Transportation
 ## Анхаарах зүйл
 
 Хүснэгтийн оноо нь тестийн жишээ. Бусад үнэлгээг эдгээр утгаар бөглөх шаардлагагүй. Store хэрэглэгч үүсгэх аргын тодорхойгүй хэсгийг [үндсэн өгөгдлийн зааварт](../getting-started/overview.md) тэмдэглэсэн.
+
+> Туршилтын үед ажиглагдсан:
+> Эх тестийн тайлбар **Good Service**, харин 16 болон 17 зураг дахь бичвэр **Good Service;** гэж төгссөн байна. Цэг тэмдгийн энэ ялгааг системийн хувиргалтын дүрэм гэж үзэхгүй.

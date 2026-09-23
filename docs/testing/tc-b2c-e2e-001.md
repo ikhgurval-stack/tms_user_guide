@@ -10,7 +10,7 @@
 | Expected | Урсгал дуусаж, холбогдох эцсийн төлөвүүд Completed/Approved болох |
 | Actual | PASS — хэрэглэгчийн өгсөн гүйцэтгэсэн тестийн үр дүн |
 | Эх сурвалж | Documentation шинэчлэх хүсэлтэд өгсөн TC-B2C-E2E-001-ийн батлагдсан тестийн мэдээлэл |
-| Нотолгооны байдал | Repository-д бодит screenshot байхгүй; доорх TODO-уудаар бүрдүүлнэ |
+| Нотолгооны байдал | 20 annotated PNG-г гарын авлагад оруулсан; зураг бүрийн байрлал болон дутуу нотолгоог доор тэмдэглэсэн |
 
 Энэ нь өмнө гүйцэтгэсэн тестийн бүртгэл. Documentation шинэчлэх явцад TMS дээр дахин тест ажиллуулаагүй. Тестийн огноо, орчны хувилбар, гүйцэтгэгчийг эх сурвалжид тусад нь өгөөгүй; баримтын дугаараас таамаглан нөхөөгүй.
 
@@ -42,7 +42,7 @@
 | Хүлээн авалт | qqB2C-DP-032 хэрэглэгчээр Store App-ийн Receipt List шалгасан | Delivery Task нь Completed / Received мэдээлэлтэй, Received хэсэгт байсан |
 | Үнэлгээ | Punctuality 3/5 Normal, Cargo Damage 3/5 Normal, Overall 5/5 Awesome, Comment: Good Service; Submit | Web дээр Дундаж / Дундаж / Маш сайн, Good Service, үнэлэгч qqB2C-DP-032; даалгавар, цэг, 1018УБА, Мөнхөө мэдээлэлтэй харагдсан |
 | Төлбөр тооцоо | Зөв тээвэрлэгчийн идэвхжүүлсэн гэрээ, Delivery Point based, 5,000 тариф | 2 × 5,000 = 10,000; Transportation Expense баримт Initial төлөвтэй үүссэн |
-| Батлах | Review → approval comment → Approve | Эх сурвалжид reviewed/approved болсон гэж тэмдэглэсэн; UI төлөвийн яг бичвэрийг нэмж баталгаажуулна |
+| Батлах | Review → approval comment → Approve | Эх сурвалжид reviewed/approved гэж тэмдэглэсэн; 20 зурагт UI төлөв Хянагдсан |
 
 Алхамчилсан гарын авлага: [захиалгаас төлбөр тооцоо хүртэл](../tutorials/order-to-delivery.md).
 
@@ -56,21 +56,54 @@
 
 ## Evidence ба дутуу screenshot
 
-Одоогоор бодит screenshot reference байхгүй. Зураг ирэхэд агуулга, баримтын ID, төлөвийг шалгаж, холбогдох зааврын үйлдлийн дараа байрлуулна. Доорх холбоосууд нь нотлох зураг биш, зургийг байрлуулах зааврын хуудас юм.
+Зургийн README-ийн тайлбар, PNG бүрийн харагдах агуулга болон зааврын контекстийг тулгаж, 20 зургийг тус бүр нэг үндсэн байрлалд оруулсан. Доорх нь давхар зураг оруулахгүйгээр эх зураг, холбогдох зааварт хүрэх холбоос юм.
 
-| Шаардлагатай нотолгоо | Байрлуулах хуудас |
-|---|---|
-| Үндсэн өгөгдөл, Store хэрэглэгч | [Үндсэн өгөгдөл](../getting-started/overview.md) |
-| Хоёр захиалга, цэгүүд | [Тээврийн захиалга](../transportation-order/create-order.md) |
-| 0/0 үр дүн, зөв тохиргоо, 2 цэг / 9.547 km / 47 min төлөвлөгөө | [Intelligent Dispatch](../planning/smart-plan.md) |
-| Тээврийн хэрэгсэл, жолоочийн оноолт, Current | [Тээврийн хэрэгсэл](../dispatch/assign-vehicle.md), [жолооч](../dispatch/assign-driver.md), [нийтлэх](../dispatch/publish.md) |
-| Ачилт, гарын үсэг, цэгүүдийн дараалал, Pickup Registration, Pickup Order, Pickup Task, Completed жагсаалт | [Driver App](../execution/index.md) |
-| Receipt List, үнэлгээ илгээх, Web дээрх үнэлгээ | [Store App](../execution/store-app.md) |
-| Гэрээ, carrier mismatch, Initial, Review, Approve, эцсийн төлөв, ¥ тэмдэг | [Төлбөр тооцоо](../reference/cost-settlement.md) |
-| Calculated distance 9.547 km ба Actual mileage 0 km | [GPS / бодит зай](../gps/index.md) |
+| Screenshot | Markdown file | Section |
+|---|---|---|
+| [01-transportation-plan-success.png](../assets/screenshots/tc-b2c-e2e-001/01-transportation-plan-success.png) | [planning/smart-plan.md](../planning/smart-plan.md) | Алхамууд: төлөвлөгөө шалгах |
+| [02-delivery-task-driver-assigned.png](../assets/screenshots/tc-b2c-e2e-001/02-delivery-task-driver-assigned.png) | [dispatch/assign-driver.md](../dispatch/assign-driver.md) | Алхамууд: оноолтыг шалгах |
+| [03-driver-current-task.png](../assets/screenshots/tc-b2c-e2e-001/03-driver-current-task.png) | [dispatch/publish.md](../dispatch/publish.md) | Алхамууд: Current хэсэгт шалгах |
+| [04-loading-confirmation.png](../assets/screenshots/tc-b2c-e2e-001/04-loading-confirmation.png) | [execution/index.md](../execution/index.md) | 1. Ачилтын цэгт ирэх, ачилт баталгаажуулах |
+| [05-loading-signature.png](../assets/screenshots/tc-b2c-e2e-001/05-loading-signature.png) | [execution/index.md](../execution/index.md) | 1. Ачилтын цэгт ирэх, ачилт баталгаажуулах |
+| [06-awaiting-delivery-dp032.png](../assets/screenshots/tc-b2c-e2e-001/06-awaiting-delivery-dp032.png) | [execution/index.md](../execution/index.md) | 1. Ачилтын цэгт ирэх, ачилт баталгаажуулах |
+| [07-pickup-registration-entry.png](../assets/screenshots/tc-b2c-e2e-001/07-pickup-registration-entry.png) | [execution/index.md](../execution/index.md) | 2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх |
+| [08-pickup-registration-form.png](../assets/screenshots/tc-b2c-e2e-001/08-pickup-registration-form.png) | [execution/index.md](../execution/index.md) | 2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх |
+| [09-pickup-registered.png](../assets/screenshots/tc-b2c-e2e-001/09-pickup-registered.png) | [execution/index.md](../execution/index.md) | 2. Эхний хүргэлтийн цэгт ирэх, сав бүртгэх |
+| [10-delivery-complete-with-pickup.png](../assets/screenshots/tc-b2c-e2e-001/10-delivery-complete-with-pickup.png) | [execution/index.md](../execution/index.md) | 3. Хүргэлтийн цэгүүдийг дуусгах |
+| [11-next-delivery-dp031.png](../assets/screenshots/tc-b2c-e2e-001/11-next-delivery-dp031.png) | [execution/index.md](../execution/index.md) | 3. Хүргэлтийн цэгүүдийг дуусгах |
+| [12-pickup-task-to-dc.png](../assets/screenshots/tc-b2c-e2e-001/12-pickup-task-to-dc.png) | [execution/index.md](../execution/index.md) | 4. Сав буцаан татах даалгаврыг дуусгах |
+| [13-pickup-order-completed-web.png](../assets/screenshots/tc-b2c-e2e-001/13-pickup-order-completed-web.png) | [execution/index.md](../execution/index.md) | 5. Web захиалга болон дууссан даалгавруудыг шалгах |
+| [14-driver-completed-task-list.png](../assets/screenshots/tc-b2c-e2e-001/14-driver-completed-task-list.png) | [execution/index.md](../execution/index.md) | 5. Web захиалга болон дууссан даалгавруудыг шалгах |
+| [15-store-receipt.png](../assets/screenshots/tc-b2c-e2e-001/15-store-receipt.png) | [execution/store-app.md](../execution/store-app.md) | 1. Хүлээн авалтыг шалгах |
+| [16-store-evaluation.png](../assets/screenshots/tc-b2c-e2e-001/16-store-evaluation.png) | [execution/store-app.md](../execution/store-app.md) | 2. Тээврийн үнэлгээ илгээх |
+| [17-web-transport-evaluation.png](../assets/screenshots/tc-b2c-e2e-001/17-web-transport-evaluation.png) | [execution/store-app.md](../execution/store-app.md) | 3. Web TMS дээр үнэлгээг шалгах |
+| [18-cost-agreement-mismatch.png](../assets/screenshots/tc-b2c-e2e-001/18-cost-agreement-mismatch.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | Анхаарах зүйл |
+| [19-cost-calculation-10000.png](../assets/screenshots/tc-b2c-e2e-001/19-cost-calculation-10000.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | 2. Төлбөр тооцоо хийж, зардлын баримтыг шалгах |
+| [20-expense-bill-approved.png](../assets/screenshots/tc-b2c-e2e-001/20-expense-bill-approved.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | 3. Зардлын баримтыг хянан батлах |
 
-<!-- TODO: Screenshot required — TC-B2C-E2E-001-ийн дээр жагсаасан нотолгоонууд -->
-<!-- TODO: Тестийн огноо, орчны хувилбар, гүйцэтгэгч, захиалгын ID, planning configuration болон bill-ийн эцсийн UI төлөвийг нөхөж баталгаажуулах. -->
+**Зураг ба эх сурвалжийн зөрүү:**
+
+- 01 зурагт төлөвлөгөө DP-032 → DP-031, 04 зурагт Delivery Point1 нь DP-031, 06 зурагт гүйцэтгэл DP-032-оос эхэлсэн байна. Дарааллын ялгааг аль дэлгэц, үе шаттай харьцуулсныг нэмж шалгана.
+- 01 зураг дахь төлөвлөлтийн дүн 12,864.1; 19 зураг дахь settlement дүн 10,000. Эдгээр дүнгийн хамаарлыг баталгаажуулаагүй.
+- 07, 09 зурагт Pickup бүртгэлийн өмнө болон дараа Arrival Confirmation харагдана. Өмнөх тестийн үйлдлийн дараалалтай тулгаж шалгана.
+- 08 зурагт Tote Box талбар хоосон. Энэ нь бөглөх маягтыг харуулна; нэг сав бүртгэсний үр дүнг 12, 13, 14 зурагт шалгана.
+- 13 зурагт “Үүсгэх арга: Гараар үүсгэх” харагдсан нь захиалга автоматаар үүссэн гэсэн тестийн тайлбартай зөрнө. Үүсэх механизмын талаар шинэ дүрэм дүгнээгүй.
+- 16, 17 зурагт тайлбар **Good Service;**, эх тестийн тэмдэглэлд **Good Service** байна.
+- 20 зурагт эцсийн төлөв **Хянагдсан** гэж харагдана. Review, тайлбар, Approve хийх явцын дэлгэцүүд энэ багцад байхгүй.
+- README-ийн 03, 12, 13 зургийн highlight тайлбаруудын зарим утга өөр дугаарын хүрээнд эсвэл хүрээний гадна харагдсан. Зааврын зургийн тайлбарт бодит байрлалыг баримталсан.
+
+**Дутуу screenshot:**
+
+- Үндсэн өгөгдөл болон Store хэрэглэгчийн бүртгэл, нэвтрэх дэлгэцүүд.
+- Тестийн хоёр Transportation Order-ийн дэлгэрэнгүй.
+- 0/0 төлөвлөлт болон амжилттай ашигласан тохиргооны дэлгэц.
+- Tote Box = 1 гэж бөглөсөн маягт; Pickup Order анх үүссэн мөчийн дэлгэц.
+- Зөв тээвэрлэгчийн идэвхжүүлсэн гэрээ, Delivery Point based төрөл, нэг цэгийн 5,000 тариф.
+- Зардлын баримтын Initial төлөв, Review, approval comment, Approve хийх дэлгэцүүд.
+
+<!-- TODO: Screenshot required — дээр жагсаасан дутуу нотолгоонууд -->
+<!-- REVIEW REQUIRED: Дараалал, төлөвлөлтийн дүн, Pickup Order-ийн үүсгэх арга болон тайлбарын бичвэрийн зөрүүг эх тесттэй тулгах. -->
+<!-- TODO: Тестийн огноо, орчны хувилбар, гүйцэтгэгч, захиалгын ID болон planning configuration-ийг нөхөж баталгаажуулах. -->
 
 ## Дараагийн санал болгож буй тестүүд
 
