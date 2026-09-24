@@ -47,3 +47,10 @@ MkDocs суулгасан орчинд `python -m mkdocs build --strict` ажи�
     .\.venv\Scripts\python.exe -m mkdocs build --strict --site-dir "$env:TEMP/tms-user-guide-build"
 
 site/ нь repository-д бүртгэгдсэн build үр дүн тул шалгалтыг тусдаа хавтас руу гаргана. Vercel нь vercel.json дахь mkdocs build командыг ашиглан site/-ийг үүсгэнэ.
+
+
+## SYS заавар ба нүүр хуудас
+
+Business Organization → User Management → Role Management зааврыг docs/sys/ хавтаст холбоно. SYS маягтын зураг байхгүй учраас UI талбар, товч, төлөв болон эрхийн дүрмийг баталгаажаагүй гэж тэмдэглэсэн. Driver / Store role ашигласан тухай нэмэлт мэдээлэл нь хэрэглэгчийн тайлбар; одоогийн screenshot-ууд role оноолтыг харуулахгүй.
+
+Үндсэн index.md нь module navigation-д харьяалагдахгүй, not_in_nav-д орсон. Зөвхөн нүүрийн metadata дахь hide: [navigation, toc] тохиргоогоор sidebar, TOC-ийг нууна. Нүүр дээр аль нэг tab идэвхжихгүй; модуль дотор тухайн tab идэвхтэй байна. Лого болон Бусад тойм дахь холбоос нүүр рүү очно.

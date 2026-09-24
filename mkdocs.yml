@@ -21,9 +21,9 @@ validation:
     not_found: warn
     anchors: warn
     unrecognized_links: warn
-not_in_nav: '/_templates/
-
-  '
+not_in_nav: |
+  /_templates/
+  /index.md
 nav:
 - TMS:
   - Ерөнхий: tms/index.md
@@ -67,6 +67,9 @@ nav:
   - Ерөнхий: sys/index.md
   - Platform System Management:
     - Ерөнхий: sys/platform-system-management.md
+    - Business Organization: sys/business-organization.md
+    - User Management: sys/user-management.md
+    - Role Management: sys/role-management.md
   - General Data:
     - Ерөнхий: sys/general-data.md
 - Mini App:
@@ -80,7 +83,6 @@ nav:
     - Хүлээн авалт ба тээврийн үнэлгээ: execution/store-app.md
 - Бусад:
   - Ерөнхий: other/index.md
-  - Системийн ерөнхий танилцуулга: index.md
   - Гарын авлагын чиглүүлэг: getting-started/navigation.md
   - Нэр томьёо: reference/index.md
   - Төлөвийн лавлах: reference/status-reference.md

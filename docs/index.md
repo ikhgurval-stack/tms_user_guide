@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # E-Mart TMS Knowledge Base
 
 Transportation Management System (TMS)-ийн эцсийн хэрэглэгчийн гарын авлага.
@@ -34,8 +40,8 @@ Transportation Management System (TMS)-ийн эцсийн хэрэглэгчи�
 
 Дараах нь санал болгож буй бэлтгэлийн дараалал. Бүх алхмын дэлгэрэнгүй заавар хараахан бэлэн болоогүй; холбоос бүрээс баримтжуулалтын төлөвийг шалгана.
 
-1. [SYS → Business Organization](sys/platform-system-management.md).
-2. [User Management → Role Management](sys/platform-system-management.md).
+1. [SYS → Business Organization](sys/business-organization.md).
+2. [User Management](sys/user-management.md) → [Role Management](sys/role-management.md).
 3. [TMS Master Data — үндсэн өгөгдөл бэлтгэх](getting-started/overview.md).
 4. [Carrier](tms/carrier-information.md).
 5. [Vehicle Type](tms/vehicle-type-management.md).

@@ -6,7 +6,7 @@
 
 -   **[Платформын системийн удирдлага (Platform System Management)](platform-system-management.md)**
 
-    User Management, Role Management, Business Organization.
+    Business Organization → User Management → Role Management. Бодит жишээ, шалгах хүрээ болон баталгаажуулах шаардлагатай тохиргоо.
 
 -   **[Ерөнхий өгөгдөл (General Data)](general-data.md)**
 
