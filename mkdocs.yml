@@ -1,1 +1,93 @@
-site_name: My Docs
+site_name: E-Mart TMS Knowledge Base
+site_description: TMS хэрэглэгчийн Монгол хэл дээрх гарын авлага
+theme:
+  name: material
+  language: mn
+  font: false
+  features:
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.indexes
+  - navigation.top
+markdown_extensions:
+- attr_list
+- md_in_html
+plugins:
+- search
+validation:
+  nav:
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+not_in_nav: '/_templates/
+
+  '
+nav:
+- TMS:
+  - Ерөнхий: tms/index.md
+  - Data Board:
+    - Ерөнхий: tms/data-board.md
+  - System Data:
+    - Ерөнхий: tms/system-data.md
+    - GPS ба бодит явсан зай: gps/index.md
+  - Message Management:
+    - Ерөнхий: tms/message-management.md
+  - Vehicle Type Management:
+    - Ерөнхий: tms/vehicle-type-management.md
+  - Carrier Information:
+    - Ерөнхий: tms/carrier-information.md
+    - Үндсэн өгөгдөл бэлтгэх: getting-started/overview.md
+  - Customer Information:
+    - Ерөнхий: tms/customer-information.md
+  - Transportation Management:
+    - Ерөнхий: tms/transportation-management.md
+    - Transport Order:
+      - Тойм: transportation-order/overview.md
+      - Захиалгын өгөгдөл шалгах: transportation-order/create-order.md
+      - Импортлох: transportation-order/import-orders.md
+      - Засварлах: transportation-order/edit-order.md
+      - Цуцлах: transportation-order/cancel-order.md
+      - Захиалгын төлөв: transportation-order/order-status.md
+    - Төлөвлөлт:
+      - Тойм: planning/overview.md
+      - Smart Scheduling / Intelligent Dispatch: planning/smart-plan.md
+      - Гараар төлөвлөх — баталгаажуулалтын хүрээ: planning/manual-plan.md
+    - Delivery Task:
+      - Тээврийн хэрэгсэл оноох: dispatch/assign-vehicle.md
+      - Жолооч оноох: dispatch/assign-driver.md
+      - Нийтлэх: dispatch/publish.md
+  - Cost Management:
+    - Ерөнхий: tms/cost-management.md
+    - Гэрээ, төлбөр тооцоо, зардлын баримт: reference/cost-settlement.md
+- RPT:
+  - Ерөнхий: reports/index.md
+- SYS:
+  - Ерөнхий: sys/index.md
+  - Platform System Management:
+    - Ерөнхий: sys/platform-system-management.md
+  - General Data:
+    - Ерөнхий: sys/general-data.md
+- Mini App:
+  - Ерөнхий: mini-app/index.md
+  - Нэвтрэх мэдээлэл: getting-started/login.md
+  - Driver App:
+    - Ерөнхий: mini-app/driver-app.md
+    - Ачилт, хүргэлт, сав буцаан татах: execution/index.md
+  - Store App:
+    - Ерөнхий: mini-app/store-app.md
+    - Хүлээн авалт ба тээврийн үнэлгээ: execution/store-app.md
+- Бусад:
+  - Ерөнхий: other/index.md
+  - Системийн ерөнхий танилцуулга: index.md
+  - Гарын авлагын чиглүүлэг: getting-started/navigation.md
+  - Нэр томьёо: reference/index.md
+  - Төлөвийн лавлах: reference/status-reference.md
+  - Тестээр баталгаажсан ажиллагаа: reference/business-rules.md
+  - Тестийн оролцогчид: reference/user-roles.md
+  - End-to-End процесс: tutorials/order-to-delivery.md
+  - Алдаа шийдвэрлэх / Known Issues: troubleshooting/index.md
+  - Түгээмэл асуулт: faq/index.md
+  - Test Case:
+    - TC-B2C-E2E-001: testing/tc-b2c-e2e-001.md

@@ -2,6 +2,49 @@
 
 Transportation Management System (TMS)-ийн эцсийн хэрэглэгчийн гарын авлага.
 
+## Үндсэн хэсгүүд
+
+<div class="grid cards" markdown>
+
+-   **[TMS](tms/index.md)**
+
+    Мастер мэдээлэл, тээврийн төлөвлөлт, гүйцэтгэл, хяналт, зардал.
+
+-   **[RPT](reports/index.md)**
+
+    Report Application болон тайлангийн баримтжуулалтын төлөв.
+
+-   **[SYS](sys/index.md)**
+
+    Платформын системийн удирдлага ба ерөнхий өгөгдөл.
+
+-   **[Mini App](mini-app/index.md)**
+
+    Driver App болон Store App-ийн заавар.
+
+-   **[Бусад](other/index.md)**
+
+    Танилцуулга, нэр томьёо, End-to-End процесс, FAQ болон тест.
+
+</div>
+
+## Шинэ хэрэглэгч бол хаанаас эхлэх вэ?
+
+### Эхлэх дараалал
+
+Дараах нь санал болгож буй бэлтгэлийн дараалал. Бүх алхмын дэлгэрэнгүй заавар хараахан бэлэн болоогүй; холбоос бүрээс баримтжуулалтын төлөвийг шалгана.
+
+1. [SYS → Business Organization](sys/platform-system-management.md).
+2. [User Management → Role Management](sys/platform-system-management.md).
+3. [TMS Master Data — үндсэн өгөгдөл бэлтгэх](getting-started/overview.md).
+4. [Carrier](tms/carrier-information.md).
+5. [Vehicle Type](tms/vehicle-type-management.md).
+6. [Vehicle → Employee/Driver](tms/carrier-information.md).
+7. [Customer → Loading Point → Delivery Point](tms/customer-information.md).
+8. [Transport Order](transportation-order/overview.md).
+
+Өгөгдөл бэлэн бол [B2C урсгалыг бүтнээр нь дагах](tutorials/order-to-delivery.md) зааврыг ашиглана.
+
 ## Documentation Status
 
 Энэхүү гарын авлага нь UAT болон тестийн явцад боловсруулагдаж байна. B2C урсгалын тайлбарыг хэрэглэгчийн өгсөн **TC-B2C-E2E-001** тестийн үр дүнгээр шинэчилсэн. Батлагдсан алхмуудад 20 тайлбартай screenshot оруулсан. Дутуу нотолгоо болон эх сурвалжийн зөрүүг [тестийн бүртгэлд](testing/tc-b2c-e2e-001.md) тэмдэглэсэн.

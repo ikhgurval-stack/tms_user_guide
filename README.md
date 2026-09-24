@@ -16,7 +16,7 @@ TC-B2C-E2E-001-ийн 20 тайлбартай PNG зургийг `docs/assets/sc
 
 ## Бүтэц ба засварлах зарчим
 
-Одоо байгаа файлын замыг хадгалсан. MkDocs нь `mkdocs.yml`-д тусгай navigation тохиргоогүй тул файлын бүтцээс цэс үүсгэнэ. Mermaid тохируулаагүй; урсгалыг Markdown холбоосоор үзүүлсэн.
+Одоо байгаа файлын замыг хадгалсан. MkDocs Material нь TMS | RPT | SYS | Mini App | Бусад гэсэн таван tab болон дэд цэстэй. Лого болон Бусад хэсгээс үндсэн нүүр рүү орно. Mermaid тохируулаагүй; урсгалыг Markdown холбоосоор үзүүлсэн.
 
 - `docs/getting-started/`: үндсэн өгөгдөл, нэвтрэлт, чиглүүлэг.
 - `docs/transportation-order/`, `docs/planning/`, `docs/dispatch/`: захиалга, төлөвлөлт, оноолт, нийтлэх.
@@ -30,3 +30,20 @@ TC-B2C-E2E-001-ийн 20 тайлбартай PNG зургийг `docs/assets/sc
 ## Локал шалгалт
 
 MkDocs суулгасан орчинд `python -m mkdocs build --strict` ажиллуулна. Энэ нь documentation-ийн бүтцийг шалгах бөгөөд TMS-ийн ажиллагааг тестлэхгүй.
+
+
+## Navigation засварлах
+
+- docs/tms/, docs/sys/, docs/mini-app/, docs/other/: үндсэн хэсэг болон бүлгийн тойм.
+- docs/reports/index.md: RPT-ийн нүүр; хуучин URL-ийг хадгалсан.
+- Бүлгийн эхний nav entry нь тухайн тойм хуудас байна. Нэг зааврыг navigation-д нэг удаа оруулж, бусад бүлгээс Markdown холбоосоор холбоно.
+- navigation.tabs нь үндсэн хэсгүүдийг, navigation.indexes нь index хуудсыг дэмжинэ. Дэд бүлгүүдийг эвхэж дэлгэх боломжтой хэвээр үлдээсэн.
+- Grid cards нь attr_list, md_in_html өргөтгөл ашиглана. Custom CSS, JavaScript, template override нэмээгүй.
+- Баримтгүй модулиудыг бүлгийн тойм дээр TODO гэж жагсаана; ажиллагааны алхам зохиохгүй.
+- _templates нь navigation-д орохгүй боловч өмнөх URL-аар бүтээнэ.
+
+Одоогийн орчинд build шалгах:
+
+    .\.venv\Scripts\python.exe -m mkdocs build --strict --site-dir "$env:TEMP/tms-user-guide-build"
+
+site/ нь repository-д бүртгэгдсэн build үр дүн тул шалгалтыг тусдаа хавтас руу гаргана. Vercel нь vercel.json дахь mkdocs build командыг ашиглан site/-ийг үүсгэнэ.
