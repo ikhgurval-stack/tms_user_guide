@@ -10,6 +10,7 @@ theme:
   - navigation.indexes
   - navigation.top
 markdown_extensions:
+- admonition
 - attr_list
 - md_in_html
 plugins:
@@ -72,6 +73,8 @@ nav:
     - Role Management: sys/role-management.md
   - General Data:
     - Ерөнхий: sys/general-data.md
+    - System Options: sys/system-options.md
+    - Data Dictionary: sys/data-dictionary.md
 - Mini App:
   - Ерөнхий: mini-app/index.md
   - Нэвтрэх мэдээлэл: getting-started/login.md
