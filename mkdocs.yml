@@ -51,6 +51,11 @@ nav:
     - Үндсэн өгөгдөл бэлтгэх: getting-started/overview.md
   - Customer Information:
     - Ерөнхий: tms/customer-information.md
+    - Харилцагчийн удирдлага (Client Management): tms/customer-information/client-management.md
+    - Ачилтын цэг (Client Loading Point): tms/customer-information/client-loading-point.md
+    - Хүргэлтийн цэг (Client Delivery Point): tms/customer-information/client-delivery-point.md
+    - Тогтмол маршрут (Fixed Route): tms/customer-information/fixed-route.md
+    - Бүсийн хуваарилалт (Region Division): tms/customer-information/region-division.md
   - Transportation Management:
     - Ерөнхий: tms/transportation-management.md
     - Transport Order:
