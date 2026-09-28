@@ -39,6 +39,15 @@ nav:
     - Ерөнхий: tms/vehicle-type-management.md
   - Carrier Information:
     - Ерөнхий: tms/carrier-information.md
+    - Тээвэрлэгч (Carrier): tms/carrier-information/carrier.md
+    - Зогсоол (Parking Area): tms/carrier-information/parking-area.md
+    - Ажилтны удирдлага (Employee Management): tms/carrier-information/employee-management.md
+    - Тээврийн хэрэгслийн удирдлага (Vehicle Management): tms/carrier-information/vehicle-management.md
+    - Түлшний карт (Fuel Card Management): tms/carrier-information/fuel-card-management.md
+    - Хуваарийн загвар (Driver Schedule Template): tms/carrier-information/driver-schedule-template.md
+    - Өдрийн хуваарь (Daily Schedule Board): tms/carrier-information/daily-schedule-board.md
+    - Өдөр тутмын ажлын тохиргоо (Daily Task Configuration): tms/carrier-information/daily-task-configuration.md
+    - Ажлын гүйцэтгэлийн бүртгэл (Daily Task Execution Record): tms/carrier-information/daily-task-execution-record.md
     - Үндсэн өгөгдөл бэлтгэх: getting-started/overview.md
   - Customer Information:
     - Ерөнхий: tms/customer-information.md
