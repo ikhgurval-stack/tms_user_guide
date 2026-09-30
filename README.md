@@ -84,3 +84,27 @@ TC-B2C-E2E-001-ийн 20 давхардсан зургийг мөн ижил б�
 Зургийн үндсэн байрлал: **docs/assets/images/screenshots/tms/customer-information/**. Бүх 22 зургийг нэг удаа ашигласан. Эх зургуудыг **assest/screenshots/tms/customer-information/**-ээс агуулгыг өөрчлөхгүй хуулж, ижил байдал болон холбоосыг шалгасны дараа гаднах 22 давхардсан хувилбарыг устгасан.
 
 Repository-д тусдаа customer-information-image-map.md, manifest.csv эсвэл developer guide олдоогүй тул зураг бүрийг нээж, дугаарын тайлбарыг бодит байрлалтай нь тулгасан. Road Network Update нь хүргэлтийн цэгийн зааврын нэмэлт ажиллагааны хэсэгт байна. Initialize Region, маршрут шинээр нэмэх маягт, Store хэрэглэгч үүсгэсний дараах үр дүн зэрэг дутуу нотолгоог зааварт тодорхой тэмдэглэсэн. Системийн ажиллагааг энэ шинэчлэлээр дахин туршаагүй.
+
+## Transportation Management заавар
+
+[Transportation Management](docs/tms/transportation-management.md)-ийг ерөнхий ойлголт болон Pickup Order, Transport Order, Quick Scheduling, Route Scheduling, Smart Scheduling, Transport Plan, Delivery Task, Pickup Task, Transportation Evaluation гэсэн дарааллаар шинэчилсэн. Одоо байсан transportation-order/, planning/, dispatch/ хуудсуудын URL-ийг хадгалж, дутуу таван заавар нэмсэн. Гараар төлөвлөх өмнөх тестийн хүрээ planning/manual-plan.md замаар холбоосоос нээгдэнэ.
+
+21 шинэ зургийг нэг бүрчлэн нээж шалган, тус бүр нэг зааварт ашигласан. Зургууд ажлын эхэнд docs/tms/transportation-management/ дотор байсан; үндсэн стандарт болох **docs/assets/images/screenshots/tms/transportation-management/** руу агуулгыг өөрчлөхгүй шилжүүлсэн. Шилжүүлэхийн өмнөх/дараах SHA-256-ыг тулгасан. Repository-д тусдаа transportation-management-image-map.md, manifest.csv, developer guide олдоогүй.
+
+Зургийн эх сурвалж ба хуудасны mapping:
+
+| Зургийн дэд хавтас | Тоо | Заавар |
+|---|---|---|
+| pickup-order | 3 | [Pickup Order](docs/tms/transportation-management/pickup-order.md) |
+| transport-order | 3 | [Жагсаалт, дэлгэрэнгүй](docs/transportation-order/overview.md), [шинэ маягт](docs/transportation-order/create-order.md) |
+| quick-scheduling | 2 | [Quick Scheduling](docs/planning/quick-scheduling.md) |
+| route-scheduling | 2 | [Route Scheduling](docs/planning/route-scheduling.md) |
+| smart-scheduling | 2 | [Smart Scheduling](docs/planning/smart-plan.md) |
+| transport-plan | 2 | [Transport Plan](docs/planning/overview.md) |
+| delivery-task | 4 | [Delivery Task](docs/dispatch/publish.md) |
+| pickup-task | 2 | [Pickup Task](docs/tms/transportation-management/pickup-task.md) |
+| transportation-evaluation | 1 | [Transportation Evaluation](docs/tms/transportation-management/transportation-evaluation.md) |
+
+Quick Scheduling-ийн Save, Pickup Task-ийн No Data-гийн дараах Save/Publish, advanced actions болон алгоритмын мэдээлэл баталгаажаагүй хэвээр. Smart Scheduling төрлийн төлөвлөгөө, Route Scheduling төрлийн task detail, өмнөх TC-B2C-E2E-001-ийн Mini App гүйцэтгэлийг тусдаа жишээгээр тайлбарласан. Шинэ Web зургуудын ижил task дугааруудаар Initial → Publish task → Shipped (Scheduled) шилжилт батлагдсан.
+
+SYS, Carrier Information болон Vehicle Type Management-ийн агуулгыг өөрчлөөгүй. Customer Information-ийн тойм дахь захиалгын маягт байхгүй гэсэн хуучирсан ганц өгүүлбэрийг шинэ зааврын холбоосоор зассан. TMS / RPT / SYS / Mini App / Бусад үндсэн tab хэвээр. Энэ нь баримтжуулалтын шинэчлэл; TMS дээр ажиллагааг дахин туршаагүй.

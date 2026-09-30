@@ -25,6 +25,7 @@ validation:
 not_in_nav: |
   /_templates/
   /index.md
+  /planning/manual-plan.md
 nav:
 - TMS:
   - Ерөнхий: tms/index.md
@@ -57,22 +58,25 @@ nav:
     - Тогтмол маршрут (Fixed Route): tms/customer-information/fixed-route.md
     - Бүсийн хуваарилалт (Region Division): tms/customer-information/region-division.md
   - Transportation Management:
-    - Ерөнхий: tms/transportation-management.md
+    - Ерөнхий ойлголт: tms/transportation-management.md
+    - Pickup Order: tms/transportation-management/pickup-order.md
     - Transport Order:
       - Тойм: transportation-order/overview.md
-      - Захиалгын өгөгдөл шалгах: transportation-order/create-order.md
+      - Шинээр үүсгэх: transportation-order/create-order.md
       - Импортлох: transportation-order/import-orders.md
       - Засварлах: transportation-order/edit-order.md
       - Цуцлах: transportation-order/cancel-order.md
       - Захиалгын төлөв: transportation-order/order-status.md
-    - Төлөвлөлт:
-      - Тойм: planning/overview.md
-      - Smart Scheduling / Intelligent Dispatch: planning/smart-plan.md
-      - Гараар төлөвлөх — баталгаажуулалтын хүрээ: planning/manual-plan.md
+    - Quick Scheduling: planning/quick-scheduling.md
+    - Route Scheduling: planning/route-scheduling.md
+    - Smart Scheduling: planning/smart-plan.md
+    - Transport Plan: planning/overview.md
     - Delivery Task:
+      - Жагсаалт, нийтлэх, дэлгэрэнгүй: dispatch/publish.md
       - Тээврийн хэрэгсэл оноох: dispatch/assign-vehicle.md
       - Жолооч оноох: dispatch/assign-driver.md
-      - Нийтлэх: dispatch/publish.md
+    - Pickup Task: tms/transportation-management/pickup-task.md
+    - Transportation Evaluation: tms/transportation-management/transportation-evaluation.md
   - Cost Management:
     - Ерөнхий: tms/cost-management.md
     - Гэрээ, төлбөр тооцоо, зардлын баримт: reference/cost-settlement.md
