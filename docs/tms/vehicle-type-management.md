@@ -116,3 +116,5 @@ Import / Export товч харагдаж байгаа ч файлын загв�
 ## Дараагийн алхам
 
 [Тээвэрлэгч үүсгэх](carrier-information/carrier.md) → [Бодит тээврийн хэрэгсэл бүртгэх](carrier-information/vehicle-management.md).
+
+Төлбөрийн нөхцөлд машины төрөл ашиглах бол [гэрээний тарифын заавар](cost-management/carrier-freight-agreement.md#pricing)-ыг үзнэ.

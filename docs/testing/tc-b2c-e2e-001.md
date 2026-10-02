@@ -78,8 +78,8 @@
 | [16-store-evaluation.png](../assets/screenshots/tc-b2c-e2e-001/16-store-evaluation.png) | [execution/store-app.md](../execution/store-app.md) | 2. Тээврийн үнэлгээ илгээх |
 | [17-web-transport-evaluation.png](../assets/screenshots/tc-b2c-e2e-001/17-web-transport-evaluation.png) | [execution/store-app.md](../execution/store-app.md) | 3. Web TMS дээр үнэлгээг шалгах |
 | [18-cost-agreement-mismatch.png](../assets/screenshots/tc-b2c-e2e-001/18-cost-agreement-mismatch.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | Анхаарах зүйл |
-| [19-cost-calculation-10000.png](../assets/screenshots/tc-b2c-e2e-001/19-cost-calculation-10000.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | 2. Төлбөр тооцоо хийж, зардлын баримтыг шалгах |
-| [20-expense-bill-approved.png](../assets/screenshots/tc-b2c-e2e-001/20-expense-bill-approved.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | 3. Зардлын баримтыг хянан батлах |
+| [19-cost-calculation-10000.png](../assets/screenshots/tc-b2c-e2e-001/19-cost-calculation-10000.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | Тооцоолсон төлбөр — ¥10,000; эх зураг нь Анхаарах зүйл хэсэгт холбоостой |
+| [20-expense-bill-approved.png](../assets/screenshots/tc-b2c-e2e-001/20-expense-bill-approved.png) | [reference/cost-settlement.md](../reference/cost-settlement.md) | Жагсаалтаас баримт хайх; эх зураг нь Анхаарах зүйл хэсэгт холбоостой |
 
 **Зураг ба эх сурвалжийн зөрүү:**
 
@@ -117,3 +117,9 @@
 - Pickup cancellation
 - Expense bill rejection
 - Expense bill void
+
+## Cost Management-ийн нэмэлт нотолгоо
+
+[Carrier Freight Agreement](../tms/cost-management/carrier-freight-agreement.md)-ийн шинэ жагсаалтад B2CFA260922000002 гэрээ Enabled төлөвтэй байна. [Carrier Fee Bill](../reference/cost-settlement.md)-ийн шинэ жагсаалт, дэлгэрэнгүйд өмнөх B2CEP260922000001 баримт Audited, ¥10,000 дүнтэй; B2CVS260922000001 даалгавар болон дээрх гэрээний дугаар харагдана. Log нь Create → Approved түүхийг харуулна.
+
+Энэ нь өмнөх тестийн үр дүнг нэмэлт зургаар тайлбарласан шинэчлэл; TMS дээр дахин тест ажиллуулаагүй. TEST02 гэрээний бөглөсөн маягт нь дээрх гэрээний тарифын нотолгоо биш. Initial Fee Bill, батлах цонх, яг 5,000 тарифын талбар болон Batch Create-ийн бүх шилжилтийн нотолгоо бүрэн болоогүй. Өмнөх 18–20 зургийг Fee Bill зааврын «Анхаарах зүйл» хэсгээс холбоосоор нээнэ.

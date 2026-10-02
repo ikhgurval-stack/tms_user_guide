@@ -149,3 +149,5 @@ Initial
 ## Дараагийн алхам
 
 [Driver Mini App: ачилт, хүргэлт](../execution/index.md) → [Store App: хүлээн авалт, үнэлгээ](../execution/store-app.md) → [Transportation Evaluation](../tms/transportation-management/transportation-evaluation.md).
+
+Даалгавартай холбоотой зардлыг [Carrier Fee Bill](../reference/cost-settlement.md)-ээс Task number-оор хайж, дүн болон гэрээний дугаарыг шалгана.

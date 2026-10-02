@@ -108,3 +108,13 @@ Repository-д тусдаа customer-information-image-map.md, manifest.csv эс�
 Quick Scheduling-ийн Save, Pickup Task-ийн No Data-гийн дараах Save/Publish, advanced actions болон алгоритмын мэдээлэл баталгаажаагүй хэвээр. Smart Scheduling төрлийн төлөвлөгөө, Route Scheduling төрлийн task detail, өмнөх TC-B2C-E2E-001-ийн Mini App гүйцэтгэлийг тусдаа жишээгээр тайлбарласан. Шинэ Web зургуудын ижил task дугааруудаар Initial → Publish task → Shipped (Scheduled) шилжилт батлагдсан.
 
 SYS, Carrier Information болон Vehicle Type Management-ийн агуулгыг өөрчлөөгүй. Customer Information-ийн тойм дахь захиалгын маягт байхгүй гэсэн хуучирсан ганц өгүүлбэрийг шинэ зааврын холбоосоор зассан. TMS / RPT / SYS / Mini App / Бусад үндсэн tab хэвээр. Энэ нь баримтжуулалтын шинэчлэл; TMS дээр ажиллагааг дахин туршаагүй.
+
+## Cost Management заавар
+
+[Cost Management-ийн тойм](docs/tms/cost-management.md), [Carrier Freight Agreement](docs/tms/cost-management/carrier-freight-agreement.md), [Carrier Fee Bill](docs/reference/cost-settlement.md) гэсэн гурван хуудастай. Fee Bill-ийн одоогийн reference/cost-settlement.md замыг хадгалж өргөжүүлсэн; давхардсан заавар үүсгээгүй.
+
+docs/assets/images/screenshots/tms/cost-management/ дахь бүх 7 зургийг нэг бүрчлэн нээж шалгасан. Carrier Freight Agreement-ийн 3 зургийг гэрээний зааварт, Carrier Fee Bill-ийн 4 зургийг баримтын зааварт тус бүр нэг удаа ашигласан. Тусдаа package README, cost-management-image-map.md, manifest.csv эсвэл developer guide repository-д олдоогүй. Зургийн marker болон заавал бөглөх улаан одоор тайлбарыг тулгасан; зургийн агуулгыг өөрчлөөгүй.
+
+TEST02-ийн Starting quantity = 5000 unit нь өмнөх B2C тестийн нэг цэгийн 5,000 тариф биш. B2CEP260922000001 баримтын Task number, Freight agreement number, ¥10,000 дүн, Audited төлөв болон Create → Approved түүхийг шинэ зургаар тайлбарласан. Хуучин B2C 18–20 зургийн замыг хадгалж, Fee Bill зааврын нотолгооны холбоосоор нээх боломжтой.
+
+Баталгаажаагүй Batch Create бүрэн урсгал, Renew, Void, тооцооны томьёо, гэрээ сонгох дараалал, автомат үүсэх нөхцөл, батлах эрх болон accounting/ERP холбоог тоймын төгсгөлд тэмдэглэсэн. TMS дээр ажиллагааг дахин туршаагүй. Carrier, Vehicle Type, Delivery Task зааварт зөвхөн холбоос нэмсэн; SYS, Customer Information, Mini App болон site/ агуулгыг өөрчлөөгүй.

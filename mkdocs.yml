@@ -79,7 +79,8 @@ nav:
     - Transportation Evaluation: tms/transportation-management/transportation-evaluation.md
   - Cost Management:
     - Ерөнхий: tms/cost-management.md
-    - Гэрээ, төлбөр тооцоо, зардлын баримт: reference/cost-settlement.md
+    - Carrier Freight Agreement: tms/cost-management/carrier-freight-agreement.md
+    - Carrier Fee Bill: reference/cost-settlement.md
 - RPT:
   - Ерөнхий: reports/index.md
 - SYS:

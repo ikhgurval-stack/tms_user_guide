@@ -95,4 +95,4 @@
 
 ## Дараагийн алхам
 
-[Зогсоол нэмэх](parking-area.md) → [Ажилтан бүртгэх](employee-management.md).
+[Зогсоол нэмэх](parking-area.md) → [Ажилтан бүртгэх](employee-management.md). Тээвэрлэгчийн төлбөрийн нөхцөлийг [Carrier Freight Agreement](../cost-management/carrier-freight-agreement.md)-д тохируулна.
